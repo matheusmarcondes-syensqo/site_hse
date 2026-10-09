@@ -1,0 +1,15 @@
+:root {
+    --var-main-color: #FF6541;
+    --var-base-font: 'Poppins', sans-serif;
+    --var-sub-font: 'Clarity City', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    .header-title {
+        font-family: var(--var-base-font);
+    }
+}
