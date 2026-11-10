@@ -1,6 +1,7 @@
 :root {
     --var-bg-color: #f3f3f3;
-    --var-text-color: #252525;
+    --var-text-color: #363636;
+    --var-contrast-color: #cbcbcb;
     --var-main-color: #FF6541;
     --var-base-font: 'Poppins', sans-serif;
     --var-sub-font: 'Clarity City', sans-serif;
@@ -11,6 +12,7 @@
     :root {
         --var-bg-color: #252525;
         --var-text-color: #eeeeee;
+        --var-contrast-color: #474747;
     }
 }
 
@@ -20,10 +22,13 @@ body {
 }
 
 header {
-    margin: 4% 42%;
-    text-align: center;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
     font-size: 1vh;
     .header-title {
+        width: 300px;
+        text-align: center;
         font-family: var(--var-base-font);
         color: var(--var-text-color);
         border: 2px solid var(--var-main-color);
@@ -45,15 +50,79 @@ header {
 
 .welcome-section {
     text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fade-in-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 30%;
+    hr {
+        width: 500px;
+    }
     h1 {
         font-family: var(--var-base-font);
         font-size: 12vh;
         color: var(--var-text-color);
-        margin: -3% 2%;
+        margin: -1% 20px;
     }
     h2 {
         font-family: var(--var-sub-font);
         font-size: 6vh;
         color: var(--var-main-color);
+        margin-bottom: -0.5%;
+    }
+}
+
+@keyframes fade-in-up {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.links-rapidos {
+    margin: 5% 10%;
+    padding-top: 10px;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    background: var(--var-main-color);
+    border-radius: 25px;
+    h1 {
+        font-family: var(--var-base-font);
+        text-align: center;
+        font-size: 5vh;
+    }
+    .links-cards {
+        display: flex;
+        justify-content: center;
+        .links-card {
+            font-family: var(--var-sub-font);
+            display: flexbox;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            margin-bottom: 2%;
+            background: var(--var-bg-color);
+            border-radius: 20px;
+            h1 {
+                font-size: 3vh;
+            }
+            button {
+                cursor: pointer;
+                width: 150px;
+                height: 50px;
+                border-radius: 10px;
+                font-size: 1.5vh;
+                font-weight: 700;
+                color: var(--var-text-color);
+                background: var(--var-contrast-color);
+                border: 2px solid var(--var-text-color);
+            }
+            button:hover {
+                background: var(--var-text-color);
+                color: var(--var-contrast-color);
+                border-color: var(--var-contrast-color);
+            }
+        }
     }
 }

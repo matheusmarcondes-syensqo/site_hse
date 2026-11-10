@@ -1,29 +1,82 @@
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1280px) {
     header {
-        margin: 25px 24%;
+        margin: 25px;
         font-size: 1vh;
+        .header-title {
+            width: 300px;
+        }
     }
     .welcome-section {
+        hr {
+            width: 325px;
+        }
+        h1 {
+            font-size: 12vh
+        }
+        h2 {
+            font-size: 6vh
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    header {
+        margin: 25px;
+        font-size: 1vh;
+        .header-title {
+            width: 300px;
+        }
+    }
+    .welcome-section {
+        hr {
+            width: 300px;
+        }
         h1 {
             font-size: 6vh;
         }
         h2 {
             font-size: 4vh;
+        }
+    }
+    .links-rapidos {
+        margin: 5% 3%;
+        .links-cards {
+            display: flexbox;
+            align-items: center;
+            .links-card {
+                padding: 20px;
+            }
         }
     }
 }
 
 @media screen and (max-width: 376px) {
     header {
-        margin: 20px 20%;
+        margin: 20px;
         font-size: 1vh;
+        .header-title {
+            width: 250px;
+        }
     }
     .welcome-section {
+        hr {
+            width: 225px;
+        }
         h1 {
             font-size: 6vh;
         }
         h2 {
             font-size: 4vh;
+        }
+    }
+    .links-rapidos {
+        margin: 5% 3%;
+        .links-cards {
+            display: flexbox;
+            align-items: center;
+            .links-card {
+                padding: 15px;
+            }
         }
     }
 }
