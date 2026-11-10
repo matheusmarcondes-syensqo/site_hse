@@ -1,0 +1,29 @@
+@media screen and (max-width: 720px) {
+    header {
+        margin: 25px 24%;
+        font-size: 1vh;
+    }
+    .welcome-section {
+        h1 {
+            font-size: 6vh;
+        }
+        h2 {
+            font-size: 4vh;
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    header {
+        margin: 20px 20%;
+        font-size: 1vh;
+    }
+    .welcome-section {
+        h1 {
+            font-size: 6vh;
+        }
+        h2 {
+            font-size: 4vh;
+        }
+    }
+}
