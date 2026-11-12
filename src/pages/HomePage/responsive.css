@@ -1,4 +1,9 @@
 @media screen and (max-width: 1300px) {
+    header {
+        .header-title {
+            width: 200px;
+        }
+    }
     .links-rapidos .links-cards .links-card h1 {
         font-size: 2.5vh;
     }

@@ -27,7 +27,7 @@ header {
     justify-content: center;
     font-size: 1vh;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(-30px);
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     .header-title {
         width: 300px;
@@ -60,7 +60,7 @@ header.visible {
 .welcome-section {
     text-align: center;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(-30px);
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     hr {
         width: 500px;
@@ -91,15 +91,15 @@ header.visible {
 }
 
 .links-rapidos {
-    margin: 5% 5%;
-    padding-top: 10px;
+    margin: 5% 5% 1% 5%;
+    padding-top: 5px;
     display: inline-flexbox;
     justify-content: center;
     align-items: center;
     background: var(--var-main-color);
     border-radius: 25px;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(-30px);
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     .links-cards {
         display: flex;
@@ -157,15 +157,70 @@ header.visible {
 
 .programas {
     margin: 0 5%;
+    padding-top: 5px;
     display: inline-flexbox;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(-30px);
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    .programas-list {
+        background: var(--var-contrast-color);
+        display: inline-flexbox;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        .programas-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: max-content;
+            height: max-content;
+            h1 {
+                font-family: var(--var-base-font);
+                max-width: 200px;
+                width: 100%;
+                text-wrap: wrap;
+                word-break: break-word;
+            }
+            hr {
+                border: none;
+                border-left: 2px solid var(--var-text-color); 
+                height: 50px;              
+                width: 0;                   
+                margin: 0 15px;             
+                display: inline-block;
+            }
+        }
+    }
 }
 
 .programas.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    font-family: var(--var-base-font);
+    background: var(--var-contrast-color);
+    height: 50px;
+    line-height: 50px;
+    bottom: 0;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    p {
+        font-size: 2vh;
+        color: var(--var-text-color);
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+footer.visible {
   opacity: 1;
   transform: translateY(0);
 }
