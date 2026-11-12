@@ -2,9 +2,6 @@
     .links-rapidos .links-cards .links-card h1 {
         font-size: 2.5vh;
     }
-    .links-rapidos .links-cards .links-card .links-button a {
-        font-size: 2.5vh;
-    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -29,10 +26,15 @@
     .links-rapidos {
         .links-cards {
             text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
             .links-card {
                 display: inline-block;
-                width: 380px;
-                height: 480px;
+                width: 350px;
+                height: 300px;
                 text-align: center;
                 img {
                     width: 150px;
@@ -43,10 +45,10 @@
                     max-width: none;
                     width: auto;
                 }
-                .links-button {
-                    .btn {
-                        width: 250px;
-                    }
+            }
+            .links-card:hover {
+                img {
+                    width: 160px;
                 }
             }
         }
@@ -81,7 +83,7 @@
             .links-card {
                 display: inline-block;
                 width: 350px;
-                height: 350px;
+                height: 320px;
                 img {
                     width: 150px;
                     margin: 15px 0;
@@ -91,8 +93,9 @@
                     max-width: none;
                     width: auto;
                 }
-                .btn {
-                    font-size: 2vh;
+            }
+            .links-card:hover {
+                img {
                     width: 160px;
                 }
             }
@@ -128,7 +131,8 @@
             .links-card {
                 display: inline-block;
                 width: 250px;
-                height: 350px;
+                height: 250px;
+                gap: 0;
                 img {
                     width: 120px;
                     margin: 15px 0;
@@ -138,9 +142,10 @@
                     max-width: none;
                     width: auto;
                 }
-                .btn {
-                    font-size: 2vh;
-                    width: 160px;
+            }
+            .links-card:hover {
+                img {
+                    width: 130px;
                 }
             }
         }
