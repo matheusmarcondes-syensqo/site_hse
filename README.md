@@ -33,12 +33,11 @@ Esta seção foi criada para reduzir o tempo de busca por recursos corporativos 
 
 | Recurso | Descrição |
 |----------|----------|
-| 🏢 Portal Corporativo | Acesso ao ambiente interno da empresa |
+| 📝 PR/QA - Itatiba | Acesso ao formulário para emissões de PR/QA |
+| 📝 PR/QA - Taboão da Serra | Acesso ao formulário para emissões de PR/QA |
+| 📄 Licenças | Acesso as licenças vigentes da empresa |
 | 📂 SharePoint | Sites e documentos corporativos |
-| 👥 Microsoft Teams | Comunicação e colaboração |
-| ☁️ OneDrive | Armazenamento de arquivos |
 | 📊 Power BI | Indicadores e dashboards |
-| 📝 Microsoft Forms | Formulários e pesquisas |
 
 > 💡 Os links serão atualizados continuamente conforme as necessidades da organização.
 

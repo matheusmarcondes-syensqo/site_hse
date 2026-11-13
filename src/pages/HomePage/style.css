@@ -98,6 +98,7 @@ header.visible {
     align-items: center;
     background: var(--var-main-color);
     border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.7);
     opacity: 0;
     transform: translateY(-30px);
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
@@ -155,6 +156,7 @@ header.visible {
     transform: translateY(0);
 }
 
+/*
 .programas {
     margin: 0 5%;
     padding-top: 5px;
@@ -175,19 +177,25 @@ header.visible {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
+            margin: 0 5%;
             width: max-content;
             height: max-content;
+            img {
+                width: 300px;
+                flex: 1;
+            }
             h1 {
                 font-family: var(--var-base-font);
-                max-width: 200px;
+                max-width: 300px;
                 width: 100%;
                 text-wrap: wrap;
                 word-break: break-word;
+                flex: 2;
             }
             hr {
                 border: none;
                 border-left: 2px solid var(--var-text-color); 
-                height: 50px;              
+                height: 70px;              
                 width: 0;                   
                 margin: 0 15px;             
                 display: inline-block;
@@ -197,6 +205,76 @@ header.visible {
 }
 
 .programas.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  */
+
+.programas {
+    margin: 0 5%;
+    padding-top: 5px;
+    display: inline-flexbox;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    .programas-list {
+        display: flex;
+        nav {
+            flex: 1;
+            background: var(--var-text-color);
+            border-radius: 25px 0 0 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,.7);
+        }
+        article {
+            flex: 4;
+            background: var(--var-contrast-color);
+            border-radius: 0 25px 25px 0;
+            padding: 25px 55px;
+            color: var(--var-text-color);
+            box-shadow: 0 10px 20px rgba(0,0,0,.7);
+            h1 {
+                font-family: var(--var-base-font);
+                font-weight: 700;
+                font-size: 4vh;
+            }
+            p {
+                font-family: var(--var-sub-font);
+            }
+        }
+    }
+}
+
+.programas.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.report {
+    margin: 0 5%;
+    padding-top: 5px;
+    display: inline-flexbox;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    .powerbi-container {
+        width:min(100%,1400px);
+        margin:auto;
+        iframe {
+            aspect-ratio: 16/9;
+            width: 100%;
+            border:none;
+            border-radius:25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,.7);
+        }
+    }
+}
+
+.report.visible {
   opacity: 1;
   transform: translateY(0);
 }

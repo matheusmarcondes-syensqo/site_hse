@@ -16,4 +16,5 @@ document.querySelectorAll('header').forEach(el => observer.observe(el)); // Enco
 document.querySelectorAll('.welcome-section').forEach(el => observer.observe(el)); // e registra cada um deles no IntersectionObserver
 document.querySelectorAll('.links-rapidos').forEach(el => observer.observe(el));
 document.querySelectorAll('.programas').forEach(el => observer.observe(el));
+document.querySelectorAll('.report').forEach(el => observer.observe(el));
 document.querySelectorAll('footer').forEach(el => observer.observe(el));
