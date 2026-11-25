@@ -1,11 +1,11 @@
 @media screen and (max-width: 1300px) {
     header {
         .header-title {
-            width: 200px;
+            width: 400px;
         }
     }
     .links-rapidos .links-cards .links-card h1 {
-        font-size: 2.5vh;
+        font-size: 1.5vh;
     }
 }
 
@@ -14,7 +14,7 @@
         margin: 25px;
         font-size: 1vh;
         .header-title {
-            width: 300px;
+            width: 400px;
         }
     }
     .welcome-section {
@@ -35,20 +35,19 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 0;
+            gap: 10px;
             .links-card {
-                display: inline-block;
-                width: 350px;
-                height: 300px;
+                width: 300px;
+                height: 180px;
                 text-align: center;
                 img {
-                    width: 150px;
+                    width: 120px;
                     margin: 15px 0;
                 }
                 h1 {
-                    font-size: 3vh;
-                    max-width: none;
-                    width: auto;
+                    font-size: 1.5vh;
+                    max-width: 120px;
+                    width: 100%;
                 }
             }
             .links-card:hover {
