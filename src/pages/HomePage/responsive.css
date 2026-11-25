@@ -78,6 +78,22 @@
 }
 
 */
+@media screen and (max-width: 1500px) {
+    header {
+        .header-title {
+            width: 220px;
+        }
+    }
+    .links-rapidos {
+        .links-cards {
+            .links-card {
+                h1 {
+                    font-size: 2vh;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 720px) {
     header {

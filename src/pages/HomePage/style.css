@@ -87,7 +87,7 @@ header.visible {
 .section-title {
         font-family: var(--var-base-font);
         text-align: center;
-        font-size: 5vh;
+        font-size: 6vh;
 }
 
 .links-rapidos {
@@ -132,7 +132,7 @@ header.visible {
                 transition: 0.3s ease;
             }
             h1 {
-                font-size: 2vh;
+                font-size: 1.5vh;
                 max-width: 100px;
                 width: 100%;
                 text-wrap: wrap;
@@ -198,7 +198,7 @@ header.visible {
 }
 
 .report {
-    margin: 5% 5% 1% 5%;
+    margin: 3% 5% 1% 5%;
     display: inline-flexbox;
     justify-content: center;
     align-items: center;
@@ -221,6 +221,69 @@ header.visible {
 .report.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.membros {
+    margin: 0 5%;
+    padding-top: 5px;
+    display: inline-flexbox;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    .membros-list {
+        display: flex;
+        .membros-card {
+            display: inline-flexbox;
+            justify-content: center;
+            align-items: center;
+            text-align:center;
+            background: var(--var-main-color);
+            width: min(100%, 300px);
+            height: 500px;
+            border: 5px solid var(--var-text-color);
+            border-radius: 25px;
+            box-shadow: 
+                /* Brilho interno/fino (mesma cor do texto ou tom claro) */
+                0 0 3px var(--var-text-color),
+                0 0 7px var(--var-text-color),
+                /* Brilho médio (cor principal do neon - ex: Rosa/Neon Pink) */
+                0 0 9px var(--var-main-color),
+                0 0 11px var(--var-main-color),
+                0 0 16px var(--var-main-color),
+                /* Brilho expandido profundo (tom ligeiramente mais escuro para espalhar a luz) */
+                0 0 20px #fd4a22,
+                0 0 30px #fd4a22,
+                0 0 55px #fd4a22;
+            h1 {
+                font-family: var(--var-base-font);
+                color: var(--var-text-color);
+                max-width: 300px;
+                width: 100%;
+                text-wrap: wrap;
+                word-break: break-word;
+            }
+            h2 {
+                font-family: var(--var-sub-font);
+                color: var(--var-text-color);
+                opacity: 0.8;
+                font-size: 2.5vh;
+                margin-top: -3vh;
+            }
+            p {
+                font-family: var(--var-base-font);
+                color: var(--var-text-color);
+                font-size: 3.5vh;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.membros.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 footer {
