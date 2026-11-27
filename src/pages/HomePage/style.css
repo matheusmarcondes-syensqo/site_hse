@@ -68,7 +68,7 @@ header.visible {
     h1 {
         font-family: var(--var-base-font);
         font-size: 12vh;
-        color: #f3f3f3;
+        color: var(--var-text-color);
         margin: -1% 20px;
     }
     h2 {
@@ -86,6 +86,7 @@ header.visible {
 
 .section-title {
         font-family: var(--var-base-font);
+        color: var(--var-text-color);
         text-align: center;
         font-size: 6vh;
 }
@@ -102,6 +103,9 @@ header.visible {
     opacity: 0;
     transform: translateY(-30px);
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    .section-title {
+        color: #f3f3f3;
+    }
     .links-cards {
         display: flex;
         flex-wrap: wrap;
@@ -117,16 +121,16 @@ header.visible {
             height: 120px;
             margin-bottom: 2%;
             font-weight: 700;
-            color: #f3f3f3;
+            color: var(--var-text-color);
             background: var(--var-contrast-color);
-            border: 2px solid #f3f3f3;
+            border: 2px solid var(--var-text-color);
             border-radius: 20px;
             text-decoration: none;
             gap: 10px;
             transition: 0.3s ease;
             img {
                 width: 80px;
-                background: #f3f3f3;
+                background: var(--var-text-color);
                 border: 5px solid var(--var-main-color);
                 border-radius: 50%;
                 transition: 0.3s ease;
@@ -140,7 +144,7 @@ header.visible {
             }
         }
         .links-card:hover {
-            background: #f3f3f3;
+            background: var(--var-text-color);
             color: var(--var-contrast-color);
             border-color: var(--var-contrast-color);
             img {
@@ -169,7 +173,7 @@ header.visible {
         display: flex;
         nav {
             flex: 1;
-            background: #f3f3f3;
+            background: var(--var-text-color);
             border-radius: 25px 0 0 25px;
             box-shadow: 0 10px 20px rgba(0,0,0,.7);
         }
@@ -178,7 +182,7 @@ header.visible {
             background: var(--var-contrast-color);
             border-radius: 0 25px 25px 0;
             padding: 25px 55px;
-            color: #f3f3f3;
+            color: var(--var-text-color);
             box-shadow: 0 10px 20px rgba(0,0,0,.7);
             h1 {
                 font-family: var(--var-base-font);
@@ -234,32 +238,24 @@ header.visible {
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     .membros-list {
         display: flex;
-        gap: 30px;
         justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
+        gap: 30px;
         .membros-card {
             display: inline-flexbox;
             justify-content: center;
             align-items: center;
             text-align:center;
-            background: var(--var-main-color);
             width: min(100%, 300px);
-            height: 450px;
-            border: 5px solid #f3f3f3;
+            height: 380px;
+            border: 3px solid transparent;
+            background:
+                linear-gradient(#14141c, #14141c) padding-box,
+                linear-gradient(135deg, #7c3aed, #06b6d4) border-box;
             border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,.7);
             gap: 0;
-            box-shadow: 
-                /* Brilho interno/fino (mesma cor do texto ou tom claro) */
-                0 0 3px #f3f3f3,
-                0 0 7px #f3f3f3,
-                /* Brilho médio (cor principal do neon - ex: Rosa/Neon Pink) */
-                0 0 9px var(--var-main-color),
-                0 0 11px var(--var-main-color),
-                0 0 16px var(--var-main-color),
-                /* Brilho expandido profundo (tom ligeiramente mais escuro para espalhar a luz) */
-                0 0 20px #fd4a22,
-                0 0 30px #fd4a22,
-                0 0 55px #fd4a22;
             img {
                 width: 150px;
                 margin-top: 10px;
@@ -267,13 +263,13 @@ header.visible {
                 border-radius: 50%;
                 inset: 0;
                 border-radius: 50%;
-                /* Ajuste o '40px' para o tamanho do esfumaçado e '0.8' para a intensidade */
-                box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8);
-                pointer-events: none;
+                -webkit-mask-image: linear-gradient(to bottom, black 100%, transparent 90%);
+                mask-image: linear-gradient(to bottom, black 60%, transparent 90%);
             }
             h1 {
                 font-family: var(--var-base-font);
-                color: #f3f3f3;
+                font-size: 26px;
+                color: var(--var-text-color);
                 max-width: 350px;
                 width: 100%;
                 text-wrap: wrap;
@@ -281,15 +277,21 @@ header.visible {
             }
             h2 {
                 font-family: var(--var-sub-font);
-                color: #f3f3f3;
+                color: var(--var-main-color);
                 opacity: 0.8;
-                font-size: 2vh;
+                font-size: 16px;
                 margin-top: -30px;
+            }
+            hr {
+                width: 250px;
+                height: 1px;
+                border: none;
+                background: var(--var-main-color);
             }
             p {
                 font-family: var(--var-base-font);
-                color: #f3f3f3;
-                font-size: 3.5vh;
+                color: var(--var-text-color);
+                font-size: 26px;
                 font-weight: 700;
                 margin-top: -1px;
             }
@@ -300,20 +302,28 @@ header.visible {
                     display: flex;
                     align-items: center;
                     gap: 7px;
-                    margin: -20px 0;
+                    margin-top: -20px;
                     h3 {
                         font-family: var(--var-base-font);
-                        color: #f3f3f3;
-                        font-size: 2vh;
+                        color: var(--var-text-color);
+                        font-size: 16px;
                     }
                     a {
                         font-family: var(--var-sub-font);
-                        color: #f3f3f3;
+                        color: var(--var-main-color);
+                        font-size: 16px;
                         text-align: center;
                         max-width: 250px;
                         width: 100%;
                         text-wrap: wrap;
                         word-break: break-word;
+                    }
+                    p {
+                        font-family: var(--var-sub-font);
+                        color: var(--var-text-color);
+                        font-weight: 400;
+                        font-size: 16px;
+                        margin: 0;
                     }
                 }
             }
@@ -338,7 +348,7 @@ footer {
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     p {
         font-size: 2vh;
-        color: #f3f3f3;
+        color: var(--var-text-color);
     }
     a {
         text-decoration: none;
